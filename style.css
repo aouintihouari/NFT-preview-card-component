@@ -1,0 +1,170 @@
+:root {
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+  --neutral-very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --neutral-very-dark-blue-dark-bg: hsl(216, 50%, 16%);
+  --neutral-very-dark-blue-line: hsl(215, 32%, 27%);
+  --neutral-white: #fff;
+  --font-size: 18px;
+  --font-family: "Outfit", sans-serif;
+  --font-thin: 300;
+  --font-normal: 400;
+  --font-bold: 600;
+  --mobile: 23.438rem;
+  --desktop: 90rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  color: var(--primary-soft-blue);
+  background-color: var(--neutral-very-dark-blue-main-bg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--neutral-very-dark-blue-dark-bg);
+  border-radius: 0.5rem;
+  width: 19%;
+  padding: 1rem;
+  z-index: 0;
+}
+
+.equilibrium-image-container {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.equilibrium-image-container .overlay {
+  border-radius: 0.5rem;
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-cyan);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.equilibrium-image-container:hover .overlay {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.equilibrium-image-container .equilibrium-image {
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.title-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-description .currency-name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-white);
+  font-size: 1rem;
+}
+
+.title-description .currency-name:hover {
+  color: var(--primary-cyan);
+  cursor: pointer;
+}
+
+.title-description .currency-description {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.currency-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currency-infos .currency-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency-infos .currency-amount .currency-logo {
+  margin-right: 0.4rem;
+  height: 18px;
+  width: 11px;
+}
+
+.currency-infos .currency-amount .currency-amount {
+  color: var(--primary-cyan);
+}
+
+.currency-infos .date-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currency-infos .date-time .clock-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.currency-infos .date-time .date-left {
+  margin-left: 0.4rem;
+}
+
+.horizontal-line {
+  margin: 0.8rem auto;
+  width: 100%;
+  border: 0.01rem solid var(--primary-soft-blue);
+  opacity: 0.3;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile .profile__image {
+  width: 2.063rem;
+  height: 2.063rem;
+  border: 0.1rem solid var(--neutral-white);
+  border-radius: 100%;
+  margin-right: 0.8rem;
+}
+
+.profile .profile__infos {
+  font-size: 0.9rem;
+}
+
+.profile .profile__infos .profile__name {
+  color: var(--neutral-white);
+}
+
+.profile .profile__infos .profile__name:hover {
+  color: var(--primary-cyan);
+  cursor: pointer;
+}
+
+@media (max-width: 27rem) {
+  .container {
+    width: 80%;
+  }
+}
